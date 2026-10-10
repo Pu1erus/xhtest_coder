@@ -1,1 +1,121 @@
 @import "tailwindcss";
+
+@theme {
+  --color-cream: #FDF6EC;
+  --color-cream-dark: #F5E6D0;
+  --color-warm-brown: #6B4226;
+  --color-warm-brown-light: #8B5E3C;
+  --color-warm-brown-dark: #4A2C17;
+  --color-coffee: #3C1518;
+  --color-amber: #D4A574;
+  --color-amber-light: #E8C9A0;
+  --color-amber-dark: #B8864E;
+  --color-espresso: #2C1810;
+  --color-latte: #F0E4D4;
+  --color-mocha: #967259;
+  --color-caramel: #C68B59;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif SC', serif;
+  background-color: #FDF6EC;
+  color: #3C1518;
+}
+
+.font-display {
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5E6D0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4A574;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8864E;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+/* Product card hover effect */
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(107, 66, 38, 0.15);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #6B4226, #8B5E3C);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4A2C17, #6B4226);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(107, 66, 38, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #D4A574;
+  color: #6B4226;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #D4A574;
+  color: white;
+}
